@@ -27,8 +27,8 @@ const App = () => {
           <Player name="Player 2" symbol="O" isActive={ActivePlayer === "O"} />
         </ol>
         <GameBoard onSelectSquare={handleSelectSquare} turns={GameTurns} />
-        <Log />
       </div>
+        <Log turns={GameTurns}/>
     </main>
   );
 };

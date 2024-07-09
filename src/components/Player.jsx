@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const Player = ({ name, symbol }) => {
+export const Player = ({ name, symbol,isActive }) => {
   const [isEditting, setIsEditting] = useState(false);
   const [playerName, setPlayerName] = useState(name);
   function handleEditClick() {
@@ -10,7 +10,7 @@ export const Player = ({ name, symbol }) => {
     setPlayerName(event.target.value);
   }
   return (
-    <li>
+    <li className={isActive ? 'active' :undefined}>
       <span className="player">
         {!isEditting ? (
           <span className="player-name">{playerName}</span>

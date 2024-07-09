@@ -4,7 +4,7 @@ export const Player = ({ name, symbol }) => {
   const [isEditting, setIsEditting] = useState(false);
   const [playerName, setPlayerName] = useState(name);
   function handleEditClick() {
-    setIsEditting((editing)=> !editing )  //true
+    setIsEditting((editing)=> !editing )  //true    
   }
   function handleChange(event) {
     setPlayerName(event.target.value);
